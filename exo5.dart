@@ -7,3 +7,14 @@ void verifierNombre(int nombre) {
     throw NombreNegatifException();
   }
 }
+
+void main() {
+  try {
+    print("Entrez un nombre :");
+    String? texte = stdin.readLineSync();
+    int nombre = int.parse(texte!);
+
+    verifierNombre(nombre);
+
+    print("Le carré est : ${nombre * nombre}");
+  } 
