@@ -17,4 +17,11 @@ void main() {
     verifierNombre(nombre);
 
     print("Le carré est : ${nombre * nombre}");
-  } 
+  } on FormatException {
+    print("Erreur : entrez un nombre entier valide.");
+  } on NombreNegatifException {
+    print("Erreur : le nombre ne doit pas être négatif.");
+  } finally {
+    print("Fin d'opération");
+  }
+}
