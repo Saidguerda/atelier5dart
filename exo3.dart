@@ -3,3 +3,11 @@ void verifierMotdepasse(String mp) {
     throw Exception("Mot de passe trop court");
   }
 }
+void main() {
+  try {
+    verifierMotdepasse("2004");
+    print("Mot de passe valide !");
+  } catch (e) {
+    print("Erreur : $e");
+  }
+}
